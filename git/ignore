@@ -1,0 +1,33 @@
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+
+# Temporary
+.netrwhist
+*~
+# Auto-generated tag files
+tags
+# Persistent undo
+[._]*.un~
+
+# Ignore all VS Code workspace files
+*.code-workspace
+
+# Dependency directories
+node_modules/
+
+# Ignore custom vs code settings
+.vscode/
+
+# Mac
+.DS_Store
+
+# Python stuff
+.venv/
+.mypy_cache/
