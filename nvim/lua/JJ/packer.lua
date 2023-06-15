@@ -92,6 +92,9 @@ return require('packer').startup(function(use)
         config = function() require("nvim-autopairs").setup {} end
     }
 
+    -- Allows me to jump to any position in the visible editor area quickly
+    use "ggandor/leap.nvim"
+
     -- Allows you to add files to your harpoon list and switch between them with keybindings
     use 'theprimeagen/harpoon'
 
