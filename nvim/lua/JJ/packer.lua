@@ -27,9 +27,11 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    -- Common utilities
+    use 'nvim-lua/plenary.nvim'
+
     use {
         'nvim-telescope/telescope.nvim',
-        tag = '0.1.1',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
