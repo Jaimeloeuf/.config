@@ -16,6 +16,13 @@ vim.keymap.set('n', "<leader>s", vim.cmd.write)
 vim.keymap.set('i', "<C-Bs>", '<C-o>db')
 vim.keymap.set('i', "<C-Del>", '<C-o>dw')
 
+-- Duplicate VS Code's behaviour to add new line below or above current line
+-- This works for both insert and normal mode to keep it simple
+vim.keymap.set('i', "<C-CR>", '<C-o>o')
+vim.keymap.set('i', "<C-S-CR>", '<C-o>O')
+vim.keymap.set('n', "<C-CR>", 'o')
+vim.keymap.set('n', "<C-S-CR>", 'O')
+
 -- This keybindings allow me to highlight lines in visual mode, and move the
 -- whole block of text up and down using the move command. Similar to alt+up/down
 -- from VS Code.
@@ -59,7 +66,7 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set('n', "Q", "<nop>")
 
 -- Used to format current file
-vim.keymap.set('n', "<leader>f", vim.lsp.buf.format)
+vim.keymap.set('n', "<leader>ff", vim.lsp.buf.format)
 
 -- Start a file based search and replace for the current word that my cursor is on
 vim.keymap.set('n', "<leader>sr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -69,11 +76,3 @@ vim.keymap.set('n', "<leader>sr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left>
 -- vim.keymap.set('n', "<C-j>", "<cmd>cprev<CR>zz")
 -- vim.keymap.set('n', "<leader>k", "<cmd>lnext<CR>zz")
 -- vim.keymap.set('n', "<leader>j", "<cmd>lprev<CR>zz")
-
--- This keybinding basically allows you make the current file executable without
--- having to do it yourself in the terminal. Not something I would use very often
--- so it is commented out for now.
--- vim.keymap.set('n', "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
-
--- This relies on tmux so not used for now.
--- vim.keymap.set('n', "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")

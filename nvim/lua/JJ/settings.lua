@@ -1,5 +1,6 @@
 -- Enforce the default cursor to turn thin in insert mode 
 vim.opt.guicursor = 'n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20'
+vim.opt.cursorline = true
 
 vim.cmd.colorscheme('tonic')
 
