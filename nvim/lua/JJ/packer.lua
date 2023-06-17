@@ -94,6 +94,11 @@ return require('packer').startup(function(use)
         config = function() require("nvim-autopairs").setup {} end
     }
 
+    use {
+        "jose-elias-alvarez/null-ls.nvim",
+        requires = { "nvim-lua/plenary.nvim" },
+    }
+
     -- Allows me to jump to any position in the visible editor area quickly
     use "ggandor/leap.nvim"
 
