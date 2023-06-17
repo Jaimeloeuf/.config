@@ -109,12 +109,15 @@ return require('packer').startup(function(use)
     -- Plugin to show git status in gutter
     use 'lewis6991/gitsigns.nvim'
 
+    -- Plugin to show all errors and diagnostics in one place
+    use "folke/trouble.nvim"
+
     -- Plugin to add vscode-like pictograms to neovim's builtin LSP.
     -- use 'onsails/lspkind-nvim'
     use {
         'onsails/lspkind-nvim',
-        config = function ()
-           require('lspkind').init()
+        config = function()
+            require('lspkind').init()
         end
     }
 
