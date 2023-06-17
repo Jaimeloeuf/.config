@@ -36,6 +36,11 @@ return require('packer').startup(function(use)
     }
 
     use {
+        'smartpde/telescope-recent-files',
+        requires = { { 'nvim-telescope/telescope.nvim' } }
+    }
+
+    use {
         'nvim-treesitter/nvim-treesitter',
         run = function()
             local ts_update = require('nvim-treesitter.install').update({ with_sync = true })

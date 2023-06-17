@@ -197,6 +197,11 @@ _G.packer_plugins = {
     path = "/Users/jj/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["telescope-recent-files"] = {
+    loaded = true,
+    path = "/Users/jj/.local/share/nvim/site/pack/packer/start/telescope-recent-files",
+    url = "https://github.com/smartpde/telescope-recent-files"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/jj/.local/share/nvim/site/pack/packer/start/telescope.nvim",
