@@ -9,6 +9,13 @@ vim.keymap.set('n', '<leader>pv', ':NvimTreeToggle<CR>')
 -- Save file
 vim.keymap.set('n', "<leader>s", vim.cmd.write)
 
+-- Mappings to emulate windows keymapping behaviour.
+-- Note that <C-Bs> does not work on terminals as the characters are eaten, so a
+-- pass through is needed. Currently this is done with a hack while i use wezterm
+-- to send the key in. This will work normally on a GUI nvim like neovide.
+vim.keymap.set('i', "<C-Bs>", '<C-o>db')
+vim.keymap.set('i', "<C-Del>", '<C-o>dw')
+
 -- This keybindings allow me to highlight lines in visual mode, and move the
 -- whole block of text up and down using the move command. Similar to alt+up/down
 -- from VS Code.
